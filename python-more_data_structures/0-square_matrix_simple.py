@@ -2,4 +2,4 @@
 def square_matrix_simple(matrix=[]):
     if not matrix:
         return None
-    return
+      return [[number * number for number in row] for row in matrix]
