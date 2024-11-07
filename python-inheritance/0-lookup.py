@@ -3,9 +3,10 @@
 Module to retrieve all attributes and methods of an object.
 
 This module contains a single function `lookup` that takes an object
-as input and returns a list of all its attributes and methods using 
+as input and returns a list of all its attributes and methods using
 the built-in `dir()` function.
 """
+
 
 def lookup(obj):
     """
