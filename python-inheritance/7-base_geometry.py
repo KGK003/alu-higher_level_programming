@@ -1,14 +1,12 @@
 #!/usr/bin/python3
-""" class BaseGeometry"""
+“””define class mylist”””
 
 
-class BaseGeometry:
-    """ base class BaseGeometry"""
-    def area(self):
-        raise Exception("area() is not implemented")
+class MyList(list):
+    “”” class MyList that inherits from list”””
 
-    def integer_validator(self, name, value):
-        if type(value) != int:
-            raise TypeError("{} must be an integer".format(name))
-        if value <= 0:
-            raise ValueError("{} must be greater than 0".format(name))
+    def print_sorted(self):
+        “””returns list in sorted order”””
+        s_list = self[:]
+        s_list.sort()
+        print(“{}”.format(s_list))
