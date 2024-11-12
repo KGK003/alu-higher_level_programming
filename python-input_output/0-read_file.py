@@ -1,7 +1,4 @@
-d file function"""
-
-
 def read_file(filename=""):
-        """reads a file and prints it out"""
-            with open(filename, encoding="utf-8") as f:
-                    print(f.read(), end="")
+    """Reads a UTF8 text file and prints its content to stdout."""
+    with open(filename, "r", encoding="utf-8") as file:
+        print(file.read(), end="")i
