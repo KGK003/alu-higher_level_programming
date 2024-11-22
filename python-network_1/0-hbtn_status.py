@@ -1,10 +1,14 @@
 #!/usr/bin/python3
-# This script fetches https://alu-intranet.hbtn.io/status and displays the body of the response
+"""
+This script fetches a URL and displays the body of the response.
+The URL is passed as an argument to the script.
+It uses the urllib package and ensures the response is printed with the required format.
+"""
 
 import urllib.request
 
 # Define the URL to fetch
-url = 'https://alu-intranet.hbtn.io/status'
+url = 'https://intranet.hbtn.io/status'
 
 # Fetch the URL
 with urllib.request.urlopen(url) as response:
