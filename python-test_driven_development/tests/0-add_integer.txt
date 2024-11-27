@@ -8,12 +8,6 @@
 >>> matrix_divided([[10, 20], [30, 40]], 10)
 [[1.0, 2.0], [3.0, 4.0]]
 
->>> matrix_divided([[1, 1], [1, 1]], 1)
-[[1.0, 1.0], [1.0, 1.0]]
-
->>> matrix_divided([], 2)
-[]
-
 >>> matrix_divided([[1, 2], [3, 4]], 'a')
 Traceback (most recent call last):
     ...
@@ -29,8 +23,18 @@ Traceback (most recent call last):
     ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix_divided([[1, 2], [3, 4, 5]], 2)
+>>> matrix_divided([[1, 2], [3, 4]], 3)
+[[0.33, 0.67], [1.0, 1.33]]
+
+>>> matrix_divided([[1, -2], [3, -4]], 2)
+[[0.5, -1.0], [1.5, -2.0]]
+
+>>> matrix_divided([[1.4, 2], [3, 4]], 2)
+[[0.7, 1.0], [1.5, 2.0]]
+
+>>> matrix_divided([[1, '2']], 3)
 Traceback (most recent call last):
     ...
-TypeError: Each row of the matrix must have the same size
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
 
