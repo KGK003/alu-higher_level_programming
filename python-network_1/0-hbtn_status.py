@@ -2,10 +2,11 @@
 import urllib.request
 
 """
-This script fetches the body of the response from the URL 
+This module fetches the body of the response from the URL 
 'https://alu-intranet.hbtn.io/status' using the urllib.request module.
 
-The body of the response is displayed with a tabulation before the dash ('-').
+It sends an HTTP GET request to the specified URL, retrieves the body of the 
+response, and prints it formatted with a tabulation before the dash ('-').
 
 Usage:
     $ python3 script.py
@@ -21,7 +22,7 @@ def fetch_status():
     - Reads the body of the response.
     - Decodes the body in UTF-8 and prints it in the specified format.
     
-    The function uses a a 'with' statement to ensure proper resource management.
+    The function uses a 'with' statement to ensure proper resource management.
     """
     url = "https://alu-intranet.hbtn.io/status"
     
@@ -37,4 +38,5 @@ def fetch_status():
 # Ensures the fetch_status function is called only when the script is run directly
 if __name__ == "__main__":
     fetch_status()
+
 
