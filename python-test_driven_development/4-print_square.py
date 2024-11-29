@@ -1,49 +1,19 @@
-The ``4-print_square`` module
-======================
+#!/usr/bin/python3
+"""
+    Module containing function that prints a square
+"""
 
-Using ``print_square``
--------------------
 
-Import ``print_square`` from the ``4-print_square`` module:
+def print_square(size):
+    """ Function that prints a square using '#' based on `size`.
 
-	>>> print_square = __import__('4-print_square').print_square
+    Args:
+        size (int): The size of one side of the square.
+    """
 
-Test argument as integer >= 0:
+    if type(size) is not int:
+        raise TypeError("size must be an integer")
+    if size < 0:
+        raise ValueError("size must be >= 0")
 
-	>>> print_square(0)
-
-	>>> print_square(4)
-	####
-	####
-	####
-	####
-
-	>>> print_square(10)
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-	##########
-
-Test argument as integer < 0:
-
-	>>> print_square(-4)
-	Traceback (most recent call last):
-	ValueError: size must be >= 0
-
-Test argument as non integer:
-
-	>>> print_square("Zero")
-	Traceback (most recent call last):
-	TypeError: size must be an integer
-
-Test no argument as non integer:
-
-	>>> print_square()
-	Traceback (most recent call last):
-	TypeError: print_square() missing 1 required positional argument: 'size'
+    print(('#' * size + '\n') * size, end='')
